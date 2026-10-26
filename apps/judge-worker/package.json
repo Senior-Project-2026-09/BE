@@ -1,0 +1,23 @@
+{
+  "name": "@battle/judge-worker",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "cross-env DOTENV_CONFIG_PATH=../../.env tsx watch src/index.ts",
+    "build": "tsc",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@battle/shared": "workspace:^",
+    "bullmq": "^6.4.2",
+    "dotenv": "^18.0.9",
+    "ioredis": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "cross-env": "^10.1.0",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3"
+  },
+  "private": true
+}
