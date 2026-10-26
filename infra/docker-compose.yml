@@ -1,0 +1,32 @@
+name: code-battle
+services:
+  postgres:
+    image: postgres:17
+    restart: unless-stopped
+    ports: ["5432:5432"]
+    environment:
+      POSTGRES_DB: code_battle
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      TZ: Asia/Seoul
+    volumes: [pg-data:/var/lib/postgresql/data]
+
+  redis:
+    image: redis:7
+    restart: unless-stopped
+    ports: ["6379:6379"]
+
+  minio:
+    # minio/minio 는 2025년 말 Docker Hub 배포가 중단돼 받을 수 없음 → Chainguard 빌드(같은 MinIO 서버) 사용
+    image: cgr.dev/chainguard/minio:latest
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    ports: ["9000:9000", "9001:9001"]
+    environment:
+      MINIO_ROOT_USER: ${MINIO_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_PASSWORD}
+    volumes: [minio-data:/data]
+
+volumes:
+  pg-data:
+  minio-data:
