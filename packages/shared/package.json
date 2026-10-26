@@ -1,0 +1,14 @@
+{
+  "name": "@battle/shared",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "private": true,
+  "types": "dist/index.d.ts"
+}
