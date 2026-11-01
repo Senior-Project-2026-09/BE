@@ -10,7 +10,7 @@ importers:
 
   apps/game-server:
     dependencies:
-      '@battle/shared':
+      '@senior-project-2026-09/shared':
         specifier: workspace:^
         version: link:../../packages/shared
       '@nestjs/common':
@@ -92,7 +92,7 @@ importers:
 
   apps/judge-worker:
     dependencies:
-      '@battle/shared':
+      '@senior-project-2026-09/shared':
         specifier: workspace:^
         version: link:../../packages/shared
       bullmq:

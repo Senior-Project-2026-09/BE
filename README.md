@@ -7,7 +7,7 @@ TC 폭탄으로 시간복잡도를 체감하는 1:1 대결형 알고리즘 학�
 ```
 apps/game-server     NestJS + Socket.IO (3000)
 apps/judge-worker    BullMQ 채점 워커 (빈 워커)
-packages/shared      앱끼리 공유할 타입 · 설정값 (@battle/shared)
+packages/shared      앱끼리 공유할 타입 · 설정값 (@senior-project-2026-09/shared)
 problems/            문제 패키지 (Kattis 형식)
 infra/               docker-compose.yml (PostgreSQL · Redis · MinIO)
 docs/                SETUP · rules · events · decisions

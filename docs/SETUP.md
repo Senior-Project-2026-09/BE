@@ -105,7 +105,7 @@ BE/
 │   ├── game-server/     NestJS (health, 빈 모듈 room · match · attack · judge, ping 게이트웨이)
 │   └── judge-worker/    Redis에 붙어 'judge' 대기열을 기다리는 빈 워커
 ├── packages/
-│   └── shared/          @battle/shared — rules.ts · events.ts · judge.ts 자리
+│   └── shared/          @senior-project-2026-09/shared — rules.ts · events.ts · judge.ts 자리
 ├── problems/            문제 패키지 (Kattis 형식)
 ├── infra/               docker-compose.yml
 ├── docs/                SETUP.md, rules.md, events.md, decisions.md
@@ -156,7 +156,7 @@ docker exec code-battle-redis-1 redis-cli ping     # PONG
 | `src/judge.ts` | 채점 작업 · 결과 타입 |
 
 ```bash
-pnpm --filter @battle/shared build      # packages/shared/dist/index.js 생성
+pnpm --filter @senior-project-2026-09/shared build      # packages/shared/dist/index.js 생성
 ```
 
 ---
@@ -213,7 +213,7 @@ unzip two-sum-count_문제패키지.zip -d problems/
 ```bash
 # 터미널 1 — BE
 pnpm infra:up
-pnpm --filter @battle/shared build
+pnpm --filter @senior-project-2026-09/shared build
 pnpm dev          # game-server · judge-worker 동시 실행
 
 # 터미널 2 — FE
@@ -256,7 +256,7 @@ fix/#<이슈번호>-<짧은설명>
 
 ### CI (`.github/workflows/ci.yml`)
 
-- BE: `pnpm install --frozen-lockfile` → `pnpm --filter @battle/shared build` → `pnpm lint` → `pnpm build`
+- BE: `pnpm install --frozen-lockfile` → `pnpm --filter @senior-project-2026-09/shared build` → `pnpm lint` → `pnpm build`
 - FE: `pnpm install --frozen-lockfile` → `pnpm lint` → `pnpm build`
 
 GitHub 라벨: `feature`, `bug`, `docs`, `web`, `server`, `judge`, `problem`, `priority-1`, `priority-2`.
