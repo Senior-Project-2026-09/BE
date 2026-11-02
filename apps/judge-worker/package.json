@@ -8,7 +8,7 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "@battle/shared": "workspace:^",
+    "@senior-project-2026-09/shared": "workspace:^",
     "bullmq": "^6.4.2",
     "dotenv": "^18.0.9",
     "ioredis": "^6.0.0"

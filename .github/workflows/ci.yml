@@ -11,6 +11,6 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: pnpm }
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter @battle/shared build
+      - run: pnpm --filter @senior-project-2026-09/shared build
       - run: pnpm lint
       - run: pnpm build
